@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Troncos Resto Bar - Experiencia Gourmet en Puerto Rico, Misiones</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Iconos de Font Awesome para redes sociales y flechas de desplegable -->
+    <!-- Font Awesome icons for social media and dropdown arrows -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            /* Colores más neutros y profesionales para un toque sofisticado */
-            --primary-color: #5C7C8A; /* Azul-verde tenue, profesional */
-            --secondary-color: #A86443; /* Terracota / Naranja quemado para acentos cálidos */
-            --text-dark: #333333; /* Gris oscuro para el texto principal */
-            --text-light: #F8F8F8; /* Blanco roto para texto sobre fondos oscuros */
-            --bg-light: #F5F5F5; /* Gris muy claro para fondos de secciones */
-            --bg-dark: #2C3E50; /* Azul-gris oscuro para encabezado y pie de página */
-            --border-color: #E0E0E0; /* Gris claro para bordes sutiles */
+            /* Neutral and professional colors for a sophisticated touch */
+            --primary-color: #5C7C8A; /* Muted blue-green, professional */
+            --secondary-color: #A86443; /* Terracota / Burnt orange for warm accents */
+            --text-dark: #333333; /* Dark gray for main text */
+            --text-light: #F8F8F8; /* Off-white for text on dark backgrounds */
+            --bg-light: #F5F5F5; /* Very light gray for section backgrounds */
+            --bg-dark: #2C3E50; /* Dark blue-gray for header and footer */
+            --border-color: #E0E0E0; /* Light gray for subtle borders */
         }
 
         body {
@@ -29,58 +29,53 @@
             overflow-x: hidden;
         }
 
-        /* --- Header y Navegación --- */
-        header { /* Revertido a los estilos originales del header */
+        /* --- Header and Navigation --- */
+        header { /* Reverted to original header styles */
             background-color: var(--bg-dark);
             color: var(--text-light);
             padding: 2.5em 0;
             text-align: center;
             position: relative;
             z-index: 10;
-            display: flex; /* Para centrar el contenido (logo y texto) */
-            flex-direction: column; /* Apila el logo y el texto verticalmente */
-            align-items: center; /* Centra horizontalmente */
-            justify-content: center; /* Centra verticalmente */
+            display: flex; /* To center content (logo and text) */
+            flex-direction: column; /* Stack logo and text vertically */
+            align-items: center; /* Horizontally center */
+            justify-content: center; /* Vertically center */
         }
 
-        /* Estilo para el contenedor del logo (el "cuadro gris profesional") */
+        /* Style for the logo container (the "professional gray box") */
         .logo-box {
             background-color: white;
-            padding: 1.5em 2em; /* Espacio interno del cuadro */
-            border-radius: 15px; /* Esquinas más redondeadas */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra gris para el efecto profesional */
-            margin-bottom: 1.5em; /* Espacio entre el logo y el título */
-            display: flex; /* Para centrar la imagen del logo dentro de la caja */
+            padding: 1.5em 2em; /* Inner spacing of the box */
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Gray shadow for professional effect */
+            margin-bottom: 1.5em; /* Space between logo and title */
+            display: flex; /* To center the logo image inside the box */
             align-items: center;
             justify-content: center;
         }
 
-        /* Estilo para la imagen del logo dentro de su caja */
-        header .logo-box img {
-            max-width: 200px; /* Ajusta el tamaño máximo del logo dentro del cuadro */
-            height: auto;
-            display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+        /* Style for the logo text inside its box */
+        header .logo-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em; /* Tamaño ajustado para que sea más grande */
+            margin: 0; /* Remove default margin from h1 inside the box */
+            letter-spacing: 1.5px;
+            text-shadow: none; /* Remove shadow as it's on a light background */
+            color: #ADD8E6; /* Color celeste claro */
         }
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.8em; /* Tamaño de fuente ligeramente más grande */
-            margin: 0.2em 0;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Sombra sutil para el título */
-            color: var(--text-light); /* Asegura que el color sea claro sobre el fondo oscuro del header */
-        }
         header p {
-            font-size: 1.3em; /* Tamaño de fuente ligeramente más grande */
+            font-size: 1.3em; /* Slightly larger font size */
             margin-top: 0.5em;
             color: rgba(255, 255, 255, 0.9);
         }
 
         nav {
             background-color: var(--primary-color);
-            padding: 1em 0; /* Aumentado el padding */
+            padding: 1em 0; /* Increased padding */
             text-align: center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -88,115 +83,115 @@
         nav a {
             color: var(--text-light);
             text-decoration: none;
-            padding: 0.9em 1.8em; /* Aumentado el padding */
+            padding: 0.9em 1.8em; /* Increased padding */
             font-weight: 600;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            text-transform: uppercase; /* Texto en mayúsculas para las pestañas */
+            text-transform: uppercase; /* Uppercase text for tabs */
             letter-spacing: 1px;
         }
         nav a:hover {
             background-color: var(--secondary-color);
-            transform: translateY(-3px); /* Efecto de elevación sutil */
+            transform: translateY(-3px); /* Subtle lift effect */
             border-radius: 6px;
         }
 
-        /* --- Contenedor Principal --- */
+        /* --- Main Container --- */
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
-            padding: 4em 0; /* Aumentado el padding */
+            padding: 4em 0; /* Increased padding */
         }
 
-        /* --- Secciones Generales --- */
+        /* --- General Sections --- */
         .section {
             background-color: white;
-            padding: 3.5em; /* Aumentado el padding */
-            margin-bottom: 3.5em; /* Aumentado el margen */
-            border-radius: 15px; /* Bordes más redondeados */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombra más suave y extendida */
+            padding: 3.5em; /* Increased padding */
+            margin-bottom: 3.5em; /* Increased margin */
+            border-radius: 15px; /* More rounded borders */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, extended shadow */
             text-align: center;
         }
         .section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.2em; /* Tamaño de fuente ligeramente más grande */
+            font-size: 3.2em; /* Slightly larger font size */
             color: var(--primary-color);
             margin-bottom: 1.2em;
             position: relative;
             display: inline-block;
-            text-transform: uppercase; /* Títulos en mayúsculas */
+            text-transform: uppercase; /* Uppercase titles */
         }
         .section h2::after {
             content: '';
             position: absolute;
-            width: 70%; /* Ligeramente más corta */
-            height: 4px; /* Un poco más gruesa */
+            width: 70%; /* Slightly shorter */
+            height: 4px; /* Slightly thicker */
             background-color: var(--secondary-color);
-            bottom: -12px; /* Más abajo */
-            left: 15%; /* Centrado con el 70% de ancho */
+            bottom: -12px; /* Further down */
+            left: 15%; /* Centered with 70% width */
             border-radius: 2px;
         }
         .section p {
-            font-size: 1.15em; /* Ligeramente más grande */
+            font-size: 1.15em; /* Slightly larger */
             max-width: 850px;
-            margin: 1.8em auto; /* Más margen */
+            margin: 1.8em auto; /* More margin */
             color: var(--text-dark);
         }
 
-        /* --- Galería de Fotos (Platos destacados y Ambiente) --- */
+        /* --- Photo Gallery (Featured Dishes and Atmosphere) --- */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Imágenes un poco más grandes */
-            gap: 2.5em; /* Más espacio entre imágenes */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly larger images */
+            gap: 2.5em; /* More space between images */
             margin-top: 3em;
         }
         .gallery-item {
-            background-color: var(--text-light); /* Fondo claro para los ítems */
+            background-color: var(--text-light); /* Light background for items */
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .gallery-item:hover {
-            transform: translateY(-10px); /* Efecto de elevación más notorio */
+            transform: translateY(-10px); /* More noticeable lift effect */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         .gallery-item img {
             width: 100%;
-            height: 280px; /* Altura de imágenes un poco mayor */
+            height: 280px; /* Slightly taller image height */
             object-fit: cover;
             display: block;
-            border-bottom: 3px solid var(--primary-color); /* Borde inferior para separar */
+            border-bottom: 3px solid var(--primary-color); /* Bottom border for separation */
         }
         .gallery-item h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.7em; /* Títulos un poco más grandes */
-            color: var(--secondary-color); /* Color de acento para los títulos */
+            font-size: 1.7em; /* Slightly larger titles */
+            color: var(--secondary-color); /* Accent color for titles */
             margin: 1.2em 0.8em 0.6em;
             text-align: center;
         }
         .gallery-item p {
-            font-size: 1em; /* Texto un poco más grande */
+            font-size: 1em; /* Slightly larger text */
             color: #555;
-            padding: 0 1.2em 1.8em; /* Más padding inferior */
+            padding: 0 1.2em 1.8em; /* More bottom padding */
             margin: 0;
             text-align: center;
         }
         .full-width-img {
             width: 100%;
-            max-height: 500px; /* Altura máxima ligeramente mayor */
+            max-height: 500px; /* Slightly taller max height */
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 2.5em;
         }
 
-        /* --- Estilos para el Carrusel de Ambiente --- */
+        /* --- Styles for Atmosphere Carousel --- */
         .carousel-container {
             position: relative;
             width: 100%;
-            max-width: 900px; /* Ancho máximo para el carrusel */
-            margin: 2.5em auto; /* Centrar y añadir margen */
+            max-width: 900px; /* Max width for carousel */
+            margin: 2.5em auto; /* Center and add margin */
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
@@ -204,70 +199,70 @@
 
         .carousel-image {
             width: 100%;
-            height: 450px; /* Altura fija para las imágenes del carrusel */
-            object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+            height: 450px; /* Fixed height for carousel images */
+            object-fit: cover; /* Adjust image without distorting */
             display: block;
-            opacity: 0; /* Oculto por defecto */
-            transition: opacity 1.5s ease-in-out; /* Transición suave entre imágenes */
+            opacity: 0; /* Hidden by default */
+            transition: opacity 1.5s ease-in-out; /* Smooth transition between images */
         }
 
         .carousel-image.active {
-            opacity: 1; /* Imagen activa visible */
+            opacity: 1; /* Active image visible */
         }
 
-        /* --- Carta de Menú (Desplegable) --- */
+        /* --- Menu (Dropdown) --- */
         .accordion-menu {
             margin-top: 3em;
             text-align: left;
         }
         .accordion-item {
-            background-color: var(--text-light); /* Fondo claro para los ítems */
-            border-radius: 10px; /* Bordes más redondeados */
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
-            margin-bottom: 1.2em; /* Más espacio entre ítems */
+            background-color: var(--text-light); /* Light background for items */
+            border-radius: 10px; /* More rounded borders */
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08); /* More subtle shadow */
+            margin-bottom: 1.2em; /* More space between items */
             overflow: hidden;
         }
         .accordion-header {
             background-color: var(--primary-color);
             color: var(--text-light);
-            padding: 1.5em 2.5em; /* Aumentado el padding */
+            padding: 1.5em 2.5em; /* Increased padding */
             cursor: pointer;
             font-family: 'Playfair Display', serif;
-            font-size: 2em; /* Títulos más grandes */
+            font-size: 2em; /* Larger titles */
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s ease, border-radius 0.3s ease;
-            border-radius: 10px; /* Bordes redondeados iniciales */
+            border-radius: 10px; /* Initial rounded borders */
         }
         .accordion-header:hover {
             background-color: var(--secondary-color);
         }
         .accordion-header.active {
-            border-bottom-left-radius: 0; /* Quita el redondeo inferior cuando está activo */
+            border-bottom-left-radius: 0; /* Remove bottom rounding when active */
             border-bottom-right-radius: 0;
         }
         .accordion-header i {
             transition: transform 0.3s ease;
-            font-size: 0.8em; /* Tamaño del icono */
+            font-size: 0.8em; /* Icon size */
         }
         .accordion-header.active i {
             transform: rotate(180deg);
         }
         .accordion-content {
-            padding: 0 2.5em; /* Relleno inicial */
+            padding: 0 2.5em; /* Initial padding */
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.7s ease-out, padding 0.7s ease-out;
-            background-color: white; /* Fondo del contenido */
+            background-color: white; /* Content background */
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            border: 1px solid var(--border-color); /* Borde sutil para la separación */
-            border-top: none; /* Sin borde superior */
+            border: 1px solid var(--border-color); /* Subtle border for separation */
+            border-top: none; /* No top border */
         }
         .accordion-content.show {
-            max-height: 1500px; /* Mayor altura máxima para más contenido */
-            padding: 2em 2.5em; /* Relleno cuando se muestra */
+            max-height: 1500px; /* Greater max height for more content */
+            padding: 2em 2.5em; /* Padding when shown */
             transition: max-height 0.7s ease-in, padding 0.7s ease-in;
         }
 
@@ -329,20 +324,20 @@
 
         .menu-category h4 {
             font-family: 'Open Sans', sans-serif;
-            font-size: 1.4em; /* Más grande */
+            font-size: 1.4em; /* Larger */
             color: var(--primary-color);
             margin-top: 1.8em;
             margin-bottom: 1em;
             text-align: center;
-            border-bottom: 1px dashed var(--border-color); /* Borde más sutil */
+            border-bottom: 1px dashed var(--border-color); /* More subtle border */
             padding-bottom: 0.5em;
         }
         .menu-item {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding: 0.8em 0; /* Más padding */
-            border-bottom: 1px dotted #e5e5e5; /* Borde más discreto */
+            padding: 0.8em 0; /* More padding */
+            border-bottom: 1px dotted #e5e5e5; /* More discreet border */
             align-items: baseline;
         }
         .menu-item:last-child {
@@ -353,40 +348,40 @@
             color: var(--text-dark);
             flex-basis: 70%;
             padding-right: 1.5em;
-            font-size: 1.05em; /* Ligeramente más grande */
+            font-size: 1.05em; /* Slightly larger */
         }
         .menu-item span:last-child {
             font-weight: 700;
-            color: var(--secondary-color); /* Color de acento para precios */
+            color: var(--secondary-color); /* Accent color for prices */
             white-space: nowrap;
             flex-basis: 25%;
             text-align: right;
-            font-size: 1.05em; /* Ligeramente más grande */
+            font-size: 1.05em; /* Slightly larger */
         }
         .menu-item p {
-            font-size: 0.95em; /* Ligeramente más grande */
+            font-size: 0.95em; /* Slightly larger */
             color: #666;
             margin-top: 0.3em;
             line-height: 1.5;
             width: 100%;
             margin-left: 0;
-            padding-bottom: 0.5em; /* Un poco de padding para separar descripciones */
+            padding-bottom: 0.5em; /* A little padding to separate descriptions */
         }
         .menu-note {
             font-style: italic;
-            color: #777; /* Color más suave */
+            color: #777; /* Softer color */
             margin-top: 2.5em;
             font-size: 0.95em;
             text-align: center;
         }
 
-        /* --- Contacto y Mapa --- */
+        /* --- Contact and Map --- */
         .contact-info {
-            font-size: 1.15em; /* Ligeramente más grande */
-            margin-top: 2.5em; /* Más margen */
+            font-size: 1.15em; /* Slightly larger */
+            margin-top: 2.5em; /* More margin */
         }
         .contact-info p {
-            margin: 1em 0; /* Más espacio entre párrafos */
+            margin: 1em 0; /* More space between paragraphs */
         }
         .contact-info strong {
             color: var(--secondary-color);
@@ -395,7 +390,7 @@
             list-style: none;
             padding: 0;
             margin: 1em auto;
-            max-width: 300px; /* Centrar y limitar ancho de la lista */
+            max-width: 300px; /* Center and limit list width */
         }
         .contact-info ul li {
             margin-bottom: 0.5em;
@@ -410,20 +405,20 @@
             text-decoration: underline;
         }
         .map-container {
-            margin-top: 3em; /* Más margen */
+            margin-top: 3em; /* More margin */
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
         .map-container iframe {
             width: 100%;
-            height: 450px; /* Mapa un poco más alto */
+            height: 450px; /* Slightly taller map */
             border: 0;
             display: block;
         }
 
-        /* --- Redes Sociales --- */
-        .social-box { /* Nuevo estilo para el cuadro de redes sociales */
+        /* --- Social Media --- */
+        .social-box { /* New style for the social media box */
             background-color: white;
             border: 1px solid var(--border-color);
             border-radius: 10px;
@@ -431,29 +426,29 @@
             margin-top: 2em;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             display: flex;
-            flex-direction: column; /* Apila los enlaces dentro del cuadro */
-            align-items: center; /* Centra los elementos horizontalmente */
-            gap: 1em; /* Espacio entre los enlaces */
+            flex-direction: column; /* Stack links inside the box */
+            align-items: center; /* Horizontally center elements */
+            gap: 1em; /* Space between links */
         }
 
         .social-links {
-            margin-top: 1em; /* Ajusta el margen superior ya que está dentro de social-box */
-            display: flex; /* Usar flexbox para centrar y espaciar */
-            flex-direction: column; /* Apilar los enlaces para que cada uno ocupe su propia línea */
-            align-items: center; /* Centrar horizontalmente */
-            gap: 1em; /* Espacio entre los elementos de redes sociales */
-            width: 100%; /* Asegura que el flexbox ocupe todo el ancho disponible en el social-box */
+            margin-top: 1em; /* Adjust top margin since it's inside social-box */
+            display: flex; /* Use flexbox to center and space */
+            flex-direction: column; /* Stack links so each occupies its own line */
+            align-items: center; /* Horizontally center */
+            gap: 1em; /* Space between social media elements */
+            width: 100%; /* Ensure flexbox takes full available width in social-box */
         }
         .social-links a {
-            display: flex; /* Para alinear icono y texto */
+            display: flex; /* To align icon and text */
             align-items: center;
-            justify-content: center; /* Centra el contenido de cada enlace */
-            width: 80%; /* Ancho de los enlaces dentro del social-box */
-            max-width: 300px; /* Limita el ancho máximo */
-            margin: 0; /* Elimina el margen lateral si está dentro de social-box */
-            padding: 0.8em 1em; /* Padding para hacer los enlaces más "boton" */
+            justify-content: center; /* Center content of each link */
+            width: 80%; /* Width of links inside social-box */
+            max-width: 300px; /* Limit max width */
+            margin: 0; /* Remove side margin if inside social-box */
+            padding: 0.8em 1em; /* Padding to make links more "button-like" */
             border-radius: 8px;
-            background-color: var(--bg-light); /* Fondo suave para cada enlace */
+            background-color: var(--bg-light); /* Soft background for each link */
             border: 1px solid var(--border-color);
             text-decoration: none;
             color: var(--primary-color);
@@ -461,26 +456,26 @@
             font-weight: 600;
         }
         .social-links a:hover {
-            color: var(--text-light); /* Texto blanco en hover */
-            background-color: var(--secondary-color); /* Fondo de acento en hover */
+            color: var(--text-light); /* White text on hover */
+            background-color: var(--secondary-color); /* Accent background on hover */
             border-color: var(--secondary-color);
             transform: translateY(-3px);
         }
         .social-links a i {
-            font-size: 2.2em; /* Iconos un poco más pequeños para caber mejor */
-            margin-right: 0.8em; /* Espacio entre icono y texto */
-            color: inherit; /* Hereda el color del padre para cambiar en hover */
+            font-size: 2.2em; /* Slightly smaller icons to fit better */
+            margin-right: 0.8em; /* Space between icon and text */
+            color: inherit; /* Inherit parent color to change on hover */
         }
         .social-links a:hover i {
-            color: var(--text-light); /* Color de icono blanco en hover */
+            color: var(--text-light); /* White icon color on hover */
         }
         .social-links a span {
-            font-size: 1.1em; /* Texto de nombre de red más grande */
-            color: var(--text-dark); /* Color del texto del nombre */
+            font-size: 1.1em; /* Larger social network name text */
+            color: var(--text-dark); /* Color of the name text */
             transition: color 0.3s ease;
         }
         .social-links a:hover span {
-             color: var(--text-light); /* Color de texto blanco en hover */
+             color: var(--text-light); /* White text color on hover */
         }
 
 
@@ -489,29 +484,29 @@
             background-color: var(--bg-dark);
             color: var(--text-light);
             text-align: center;
-            padding: 2.5em 0; /* Más padding */
-            margin-top: 3.5em; /* Más margen */
-            font-size: 1em; /* Texto un poco más grande */
+            padding: 2.5em 0; /* More padding */
+            margin-top: 3.5em; /* More margin */
+            font-size: 1em; /* Slightly larger text */
         }
         footer p {
             margin: 0.6em 0;
             color: rgba(255, 255, 255, 0.9);
         }
 
-        /* --- Media Queries para Responsive Design --- */
+        /* --- Media Queries for Responsive Design --- */
         @media (max-width: 768px) {
             header {
-                padding-top: 1.5em; /* Ajuste para el padding superior en móviles */
-                padding-bottom: 1.5em; /* Ajuste para el padding inferior en móviles */
+                padding-top: 1.5em; /* Adjust top padding on mobile */
+                padding-bottom: 1.5em; /* Adjust bottom padding on mobile */
             }
             .logo-box {
-                padding: 1em 1.5em; /* Padding más pequeño para el logo en móviles */
+                padding: 1em 1.5em; /* Smaller padding for logo on mobile */
                 margin-bottom: 1em;
             }
-            header .logo-box img {
-                max-width: 150px; /* Ajuste del tamaño del logo en móviles */
+            header .logo-box h1 {
+                font-size: 2.8em; /* Ajustado para pantallas medianas */
             }
-            header h1 {
+            header h1 { /* No longer needed after moving h1 inside logo-box */
                 font-size: 2.8em;
             }
             header p {
@@ -539,7 +534,7 @@
                 height: 220px;
             }
             .carousel-image {
-                height: 350px; /* Ajuste para móviles */
+                height: 350px; /* Adjust for mobile */
             }
             .accordion-header {
                 font-size: 1.5em;
@@ -549,7 +544,7 @@
                 padding: 1.5em 1.5em;
             }
             .social-links a {
-                width: 90%; /* Ajuste para pantallas pequeñas */
+                width: 90%; /* Adjust for small screens */
             }
             .social-links a i {
                 font-size: 2em;
@@ -571,17 +566,18 @@
                 padding: 0.8em 1.2em;
                 margin-bottom: 0.8em;
             }
-            header .logo-box img {
-                max-width: 100px;
+            header .logo-box h1 {
+                font-size: 2em; /* Ajustado para pantallas pequeñas */
+                letter-spacing: 1px;
             }
-            header h1 {
+            header h1 { /* No longer needed after moving h1 inside logo-box */
                 font-size: 2.2em;
             }
             header p {
                 font-size: 1em;
             }
             nav {
-                flex-direction: column; /* Apilar enlaces de navegación */
+                flex-direction: column; /* Stack navigation links */
             }
             nav a {
                 flex-basis: 100%;
@@ -599,7 +595,7 @@
                 height: 180px;
             }
             .carousel-image {
-                height: 250px; /* Ajuste para móviles */
+                height: 250px; /* Adjust for mobile */
             }
             .accordion-header {
                 font-size: 1.3em;
@@ -612,9 +608,9 @@
                 padding: 1.5em;
             }
             .social-links a {
-                width: 100%; /* Ocupa todo el ancho disponible */
-                flex-direction: column; /* Apilar icono y texto */
-                margin: 0.8em 0; /* Eliminar margen lateral */
+                width: 100%; /* Take full available width */
+                flex-direction: column; /* Stack icon and text */
+                margin: 0.8em 0; /* Remove side margin */
             }
             .social-links a i {
                 margin-right: 0;
@@ -632,9 +628,8 @@
 <body>
 <header>
     <div class="logo-box">
-        <img src="logo los troncos(1).png" alt="Los Troncos Resto Bar Logo">
+        <h1>Los Troncos Resto Bar</h1>
     </div>
-    <h1>Los Troncos Resto Bar</h1>
     <p>¡Donde cada bocado es una experiencia gourmet!</p>
 </header>
 
@@ -642,7 +637,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#galeria-ambiente">Nuestro Ambiente</a>
         <a href="#platos-destacados">Nuestras Delicias</a>
-        <a href="#explora-comidas">Explora Comidas</a> <!-- Enlace a la nueva sección -->
+        <a href="#explora-comidas">Explora Comidas</a>
         <a href="#carta-completa">Carta Completa</a>
         <a href="#contacto">Contacto</a>
     </nav>
@@ -658,6 +653,7 @@
             <h2>Nuestro Ambiente</h2>
             <p>Un espacio diseñado para tu confort y disfrute, ideal para cualquier ocasión.</p>
             <div class="carousel-container">
+                <!-- Se utiliza la primera imagen del carrusel como base -->
                 <img id="carousel-img" src="IMG-20250601-WA0014.jpg" alt="Exterior de Los Troncos Resto Bar de noche" class="carousel-image active">
             </div>
             <p>Te invitamos a sumergirte en la atmósfera única de Los Troncos. Nuestro diseño interior combina lo rústico con lo moderno, creando un lugar perfecto para relajarse y compartir.</p>
@@ -668,69 +664,61 @@
             <p>Descubre una selección de nuestros platos más populares y visualmente atractivos, una invitación a saborear la calidad.</p>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="IMG-20250606-WA0006 - copia.jpg" alt="Pizza Palo Rosa">
+                    <img src="IMG-20250606-WA0006.jpg" alt="Pizza Palo Rosa">
                     <h3>Pizza Palo Rosa</h3>
                     <p>Nuestra pizza insignia, con una combinación única de ingredientes frescos, aceitunas, tomates cherry y un toque de pesto.</p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0050.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0050.jpg" alt="Medallones de Lomo con Salsa de Champiñones y Puré mixto">
                     <h3>Lomo al Champiñón</h3>
                     <p>Tiernos medallones de lomo en una rica salsa de champiñones, cebollita y crema, servidos con puré de calabaza.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG-20250606-WA0011 - copia.jpg" alt="Milanesa Napolitana con Papas Fritas">
+                    <img src="IMG-20250606-WA0011.jpg" alt="Milanesa Napolitana con Papas Fritas">
                     <h3>Milanesa Napolitana</h3>
                     <p>Clásica milanesa de ternera cubierta con salsa de tomate, jamón, queso gratinado y acompañada de papas fritas.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG-20250606-WA0009 - copia.jpg" alt="Picada Variada Los Troncos con Empanadas, Papas y Carnes">
+                    <img src="IMG-20250606-WA0009.jpg" alt="Picada Variada Los Troncos con Empanadas, Papas y Carnes">
                     <h3>Picada Los Troncos 2 personas</h3>
                     <p>Una selección generosa de empanadas, huevos rellenos, jamón, queso, papas y mandiocas fritas, ideal para compartir.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG-20250606-WA0012 - copia.jpg" alt="Sándwich de Jamón y Huevo con pan rústico">
+                    <img src="IMG-20250606-WA0012.jpg" alt="Sándwich de Jamón y Huevo con pan rústico">
                     <h3>Sándwich Loro Negro</h3>
                     <p>Un delicioso sándwich con jamón, lechuga, tomate y un huevo frito, en un pan artesanal tostado.</p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0030.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0030.jpg" alt="Pizza Araticú">
                     <h3>Pizza Araticú</h3>
                     <p>Nuestra pizza de cebolla, simple y deliciosa, con abundante queso mozzarella y cebolla fresca.</p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0063.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0063.jpg" alt="Bife de chorizo">
                     <h3>Bife de chorizo</h3>
                     <p>Opcional Bife de chorizo con manteca especiada y papas aplastadas.</p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0041.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0041.jpg" alt="Milanesa los troncos">
                     <h3>Milanesa los troncos</h3>
                     <p> Carne de ternera, queso mozzarella, cheddar, panceta y huevo frito. c/guarnición </p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0021.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0021.jpg" alt="Milanesa a caballo">
                     <h3>Milanesa a caballo</h3>
                     <p> Carne de ternera con huevos fritos. c/guarnición </p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0026.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0026.jpg" alt="Sandwich IBIRA">
                     <h3>Sandwich Ibirá</h3>
                     <p> Pan árabe, carnedesmechada al vino tinto, cebolla y morrones salteados, salsa de ajo y especias. </p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250601-WA0035.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250601-WA0035.jpg" alt="HamburPizza">
                     <h3>HamburPizza</h3>
                     <p>Salsa de tomate, Queso mozzarella, medallon de carne, tomate, huevo frito. </p>
                 </div>
                 <div class="gallery-item">
-                    <!-- VERIFICAR ESTA IMAGEN: Asegúrate que el nombre del archivo 'IMG-20250605-WA0014.jpg' y su ubicación son correctos en tu sistema. -->
                     <img src="IMG-20250605-WA0014.jpg" alt="Pizza Kurupi">
                     <h3>Pizza Kurupi</h3>
                     <p>salsa de tomate, Queso mozzarella, carne de ternera picada a cuchillo y cebolla caramelizada.</p>
@@ -738,68 +726,68 @@
             </div>
         </section>
 
-        <!-- Nueva sección: Explora Nuestras Creaciones Culinarias -->
+        <!-- New section: Explora Nuestras Creaciones Culinarias -->
         <section id="explora-comidas" class="section">
             <h2>Explora Nuestras Creaciones Culinarias</h2>
             <p>Aquí podrás ver una muestra visual de nuestros deliciosos platos, organizados por categoría para tu fácil exploración. Haremos que tu elección sea aún más tentadora.</p>
             <div class="accordion-menu">
-                <!-- Ejemplo de categoría: Entradas -->
+                <!-- Example category: Appetizers -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Entradas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/c7a591/ffffff?text=Bruschetta" alt="Bruschetta de la Casa">
                             <h4>Bruschetta de la Casa</h4>
                             <p>Tostadas artesanales con tomate fresco, albahaca y un toque de aceite de oliva virgen extra.</p>
                         </div>
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/b0c4de/ffffff?text=Provoleta" alt="Provoleta Gratinada">
                             <h4>Provoleta Gratinada</h4>
                             <p>Queso provolone fundido con orégano y un toque de ají molido, servido con pan rústico.</p>
                         </div>
-                        <!-- Puedes añadir más platos aquí -->
+                        <!-- You can add more dishes here -->
                     </div>
                 </div>
 
-                <!-- Ejemplo de categoría: Pastas Frescas -->
+                <!-- Example category: Fresh Pastas -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Pastas Frescas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/8fbc8f/ffffff?text=Noquis" alt="Ñoquis Caseros">
                             <h4>Ñoquis Caseros</h4>
                             <p>Deliciosos ñoquis de papa con nuestra salsa bolognesa tradicional o una suave crema de cuatro quesos.</p>
                         </div>
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/daa520/ffffff?text=Ravioles" alt="Ravioles de Espinaca">
                             <h4>Ravioles de Espinaca</h4>
                             <p>Ravioles rellenos de espinaca y ricotta, bañados en salsa rosada o un aromático pesto casero.</p>
                         </div>
-                        <!-- Puedes añadir más platos aquí -->
+                        <!-- You can add more dishes here -->
                     </div>
                 </div>
 
-                <!-- Ejemplo de categoría: Especialidades del Chef -->
+                <!-- Example category: Chef Specialties -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Especialidades del Chef <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/cd853f/ffffff?text=Salmon" alt="Salmón Rosado a la Plancha">
                             <h4>Salmón Rosado a la Plancha</h4>
                             <p>Filet de salmón fresco cocinado a la perfección, acompañado de vegetales al vapor y una salsa ligera de limón.</p>
                         </div>
                         <div class="dish-gallery-item">
-                            <!-- Usa una imagen de placeholder por ahora, reemplázala con tu imagen real -->
+                            <!-- Use your real image here instead of placeholder -->
                             <img src="https://placehold.co/300x200/a9a9a9/ffffff?text=Risotto" alt="Risotto de Hongos Silvestres">
                             <h4>Risotto de Hongos Silvestres</h4>
                             <p>Arroz arbóreo cremoso con una exquisita mezcla de hongos silvestres y queso parmesano gratinado.</p>
                         </div>
-                        <!-- Puedes añadir más platos aquí -->
+                        <!-- You can add more dishes here -->
                     </div>
                 </div>
             </div>
@@ -846,16 +834,16 @@
                     </div>
                 </div>
 
-                <!-- Sándwiches -->
+                <!-- Sandwiches -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Sándwiches <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
                         <div class="menu-item"><span>Sándwich Desmechado Premium</span><span>$ 8.500</span><p>Carne desmechada tierna, cebolla caramelizada, pimientos asados y hojas frescas en pan artesanal.</p></div>
-                        <!-- Agrega más sándwiches aquí si tienes -->
+                        <!-- Add more sandwiches here if you have them -->
                     </div>
                 </div>
 
-                <!-- Guarniciones -->
+                <!-- Sides -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Guarniciones <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -871,7 +859,7 @@
                     </div>
                 </div>
 
-                <!-- Picadas -->
+                <!-- Pickles -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Picadas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -896,7 +884,7 @@
                         <div class="menu-item"><span>Pindó</span><span>$ 14.000</span><p>Salsa de tomate, bondiola, queso mozzarella, rodajas de tomate, aceitunas y aceite de ajo.</p></div>
                         <div class="menu-item"><span>Los Troncos</span><span>$ 15.000</span><p>Salsa de tomate, queso mozzarella, queso cheddar y panceta.</p></div>
                         <div class="menu-item"><span>Ananá</span><span>$ 15.000</span><p>Salsa de tomate, queso mozzarella, jamón crudo, ananá y cerezas.</p></div>
-                        <div class="menu-item"><span>Kurupí</span><span>$ 15.000</span><p>Salsa de tomate, queso mozzarella, carne de ternera picada a cuchillo y cebolla caramelizada.</p></div>
+                        <div class="menu-item"><span>Kurupí</span><span>$ 15.000</span><p>Salsa de tomate, Queso mozzarella, carne de ternera picada a cuchillo y cebolla caramelizada.</p></div>
                         <div class="menu-item"><span>Hambur Pizza</span><span>$ 15.000</span><p>Salsa de tomate, Queso mozzarella, medallon de carne, tomate, huevo frito. </p></div>
                         <div class="menu-item"><span>Mora Morada</span><span>$ 13.000</span><p>Queso mozzarella, cebolla morada y oliva.</p></div>
                         <div class="menu-item"><span>Araticú</span><span>$ 17.000</span><p>Queso mozzarella, queso provolone, jamón, morrones asados, cubierta de cebolla, oliva y orégano.</p></div>
@@ -921,7 +909,7 @@
                     </div>
                 </div>
 
-                <!-- Postres -->
+                <!-- Desserts -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Postres <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -932,7 +920,7 @@
                     </div>
                 </div>
 
-                <!-- Bebidas sin Alcohol -->
+                <!-- Non-alcoholic beverages -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Bebidas sin Alcohol <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -955,7 +943,7 @@
                     </div>
                 </div>
 
-                <!-- Cervezas -->
+                <!-- Beers -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Cervezas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -975,7 +963,7 @@
                     </div>
                 </div>
 
-                <!-- Vinos -->
+                <!-- Wines -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Vinos <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -994,7 +982,7 @@
                     </div>
                 </div>
 
-                <!-- Tragos -->
+                <!-- Cocktails -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Tragos <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -1010,10 +998,10 @@
                     </div>
                 </div>
             </div>
-            <p class="menu-note">*Los precios están expresados en pesos argentinos y son orientativos. Pueden variar sin previo aviso. Consultar disponibilidad al personal.</p>
+            <p class="menu-note">*Prices are expressed in Argentine pesos and are indicative. They may vary without prior notice. Consult staff for availability.</p>
         </section>
 
-        <section id="contacto" class="section">
+        <section id="contact" class="section">
             <h2>Encuéntranos</h2>
             <p>Estamos ansiosos por recibirte en Los Troncos Resto Bar.</p>
             <div class="contact-info">
@@ -1027,10 +1015,10 @@
             </div>
             <div class="map-container">
                 <h3>¿Cómo llegar?</h3>
-                <!-- Google Maps Embed Code para Av. San Martín 2758, Puerto Rico, Misiones -->
+                <!-- Google Maps Embed Code for Av. San Martín 2758, Puerto Rico, Misiones -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.009087532393!2d-56.86241312389953!3d-26.65709147677469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94553b4998797f7b%3A0xf63934d43615f53c!2sLos%20Troncos%20Resto%20Bar!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="social-box"> <!-- Nuevo contenedor para el cuadro de redes sociales -->
+            <div class="social-box"> <!-- New container for social media box -->
                 <p>Síguenos y contáctanos:</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/lostroncos_restobar" target="_blank" title="Instagram de Los Troncos">
@@ -1048,21 +1036,21 @@
     </div>
 
     <footer>
-        <p>© 2025 Los Troncos Resto Bar. Todos los derechos reservados.</p>
-        <p>Hecho con pasión por la buena mesa.</p>
+        <p>© 2025 Los Troncos Resto Bar. All rights reserved.</p>
+        <p>Made with passion for good food.</p>
     </footer>
 
     <script>
-        // JavaScript para el menú desplegable (acordeón)
+        // JavaScript for the dropdown menu (accordion)
         document.addEventListener('DOMContentLoaded', function() {
             const accordionHeaders = document.querySelectorAll('.accordion-header');
 
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', function() {
-                    const currentItem = this.parentNode; // El 'accordion-item' completo
-                    const currentContent = this.nextElementSibling; // El 'accordion-content'
+                    const currentItem = this.parentNode; // The complete 'accordion-item'
+                    const currentContent = this.nextElementSibling; // The 'accordion-content'
 
-                    // Cierra todos los demás contenidos abiertos
+                    // Close all other open contents
                     accordionHeaders.forEach(otherHeader => {
                         const otherContent = otherHeader.nextElementSibling;
                         if (otherContent !== currentContent && otherContent.classList.contains('show')) {
@@ -1071,24 +1059,26 @@
                         }
                     });
 
-                    // Abre o cierra el contenido actual
+                    // Open or close the current content
                     this.classList.toggle('active');
                     currentContent.classList.toggle('show');
                 });
             });
 
-            // JavaScript para el carrusel de imágenes del ambiente
+            // JavaScript for the atmosphere image carousel
             const carouselImages = [
-                "IMG-20250601-WA0014.jpg", // Exterior
-                "Imagen de WhatsApp 2025-06-06 a las 11.40.31_b0fd491b.jpg", // Mesa con platos
-                "IMG-20250606-WA0004.jpg", // Luces colgantes
-                "IMG-20250606-WA0003.jpg"  // Cava de vinos
+                "IMG-20250601-WA0014.jpg",
+                "IMG-20250606-WA0004.jpg",
+                "IMG-20250606-WA0003.jpg",
+                // La imagen "Imagen de WhatsApp 2025-06-06 a las 11.40.33_1e2721cb.jpg" ha sido eliminada.
+                // Por favor, proporcióname la nueva imagen para añadirla aquí.
             ];
             const carouselAltTexts = [
                 "Exterior de Los Troncos Resto Bar de noche",
-                "Mesa de buffet con platos y vasos en Los Troncos",
                 "Detalle de luces colgantes Edison en Los Troncos",
                 "Decoración de cava de vinos en la pared de Los Troncos"
+                // El texto alternativo para la imagen eliminada ha sido eliminado.
+                // Por favor, proporciona el texto alternativo para la nueva imagen.
             ];
             let currentImageIndex = 0;
             const carouselImgElement = document.getElementById('carousel-img');
@@ -1108,7 +1098,7 @@
                 }, 500); // This delay should be less than the CSS transition duration
             }
 
-            // Inicia el carrusel cada 4 segundos
+            // Start the carousel every 4 seconds
             setInterval(changeCarouselImage, 4000);
         });
     </script>
