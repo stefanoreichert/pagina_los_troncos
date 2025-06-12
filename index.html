@@ -379,31 +379,56 @@
         .contact-info {
             font-size: 1.15em; /* Slightly larger */
             margin-top: 2.5em; /* More margin */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack items vertically by default */
+            align-items: center; /* Center items horizontally */
+            gap: 1em; /* Space between contact lines */
+            padding: 1.5em; /* Add some padding around the contact info */
+            background-color: var(--bg-light); /* Light background for the info box */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Subtle shadow */
         }
-        .contact-info p {
-            margin: 1em 0; /* More space between paragraphs */
+
+        .contact-info .info-line {
+            display: flex;
+            align-items: center;
+            gap: 0.8em; /* Space between icon and text */
+            font-size: 1.2em; /* Slightly larger for readability */
+            color: var(--text-dark);
+            text-align: left; /* Align text within its line */
+            width: 100%; /* Take full width of parent */
+            max-width: 400px; /* Limit width for aesthetics */
+            justify-content: center; /* Center content of each line */
         }
-        .contact-info strong {
-            color: var(--secondary-color);
+
+        .contact-info .info-line i {
+            color: var(--primary-color); /* Icon color */
+            font-size: 1.5em; /* Larger icons */
         }
-        .contact-info ul {
-            list-style: none;
-            padding: 0;
-            margin: 1em auto;
-            max-width: 300px; /* Center and limit list width */
-        }
-        .contact-info ul li {
-            margin-bottom: 0.5em;
-        }
-        .contact-info a {
+
+        .contact-info .info-line a {
             color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 600; /* Bold links */
         }
-        .contact-info a:hover {
+        .contact-info .info-line a:hover {
             color: var(--secondary-color);
             text-decoration: underline;
         }
+
+        .contact-info .hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5em 0 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact-info .hours-list li {
+            margin-bottom: 0.3em;
+            color: #555;
+        }
+
         .map-container {
             margin-top: 3em; /* More margin */
             border-radius: 15px;
@@ -637,7 +662,6 @@
         <a href="#inicio">Inicio</a>
         <a href="#galeria-ambiente">Nuestro Ambiente</a>
         <a href="#platos-destacados">Nuestras Delicias</a>
-        <a href="#explora-comidas">Explora Comidas</a>
         <a href="#carta-completa">Carta Completa</a>
         <a href="#contacto">Contacto</a>
     </nav>
@@ -726,73 +750,6 @@
             </div>
         </section>
 
-        <!-- New section: Explora Nuestras Creaciones Culinarias -->
-        <section id="explora-comidas" class="section">
-            <h2>Explora Nuestras Creaciones Culinarias</h2>
-            <p>Aquí podrás ver una muestra visual de nuestros deliciosos platos, organizados por categoría para tu fácil exploración. Haremos que tu elección sea aún más tentadora.</p>
-            <div class="accordion-menu">
-                <!-- Example category: Appetizers -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">Entradas <i class="fas fa-chevron-down"></i></h3>
-                    <div class="accordion-content">
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/c7a591/ffffff?text=Bruschetta" alt="Bruschetta de la Casa">
-                            <h4>Bruschetta de la Casa</h4>
-                            <p>Tostadas artesanales con tomate fresco, albahaca y un toque de aceite de oliva virgen extra.</p>
-                        </div>
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/b0c4de/ffffff?text=Provoleta" alt="Provoleta Gratinada">
-                            <h4>Provoleta Gratinada</h4>
-                            <p>Queso provolone fundido con orégano y un toque de ají molido, servido con pan rústico.</p>
-                        </div>
-                        <!-- You can add more dishes here -->
-                    </div>
-                </div>
-
-                <!-- Example category: Fresh Pastas -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">Pastas Frescas <i class="fas fa-chevron-down"></i></h3>
-                    <div class="accordion-content">
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/8fbc8f/ffffff?text=Noquis" alt="Ñoquis Caseros">
-                            <h4>Ñoquis Caseros</h4>
-                            <p>Deliciosos ñoquis de papa con nuestra salsa bolognesa tradicional o una suave crema de cuatro quesos.</p>
-                        </div>
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/daa520/ffffff?text=Ravioles" alt="Ravioles de Espinaca">
-                            <h4>Ravioles de Espinaca</h4>
-                            <p>Ravioles rellenos de espinaca y ricotta, bañados en salsa rosada o un aromático pesto casero.</p>
-                        </div>
-                        <!-- You can add more dishes here -->
-                    </div>
-                </div>
-
-                <!-- Example category: Chef Specialties -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">Especialidades del Chef <i class="fas fa-chevron-down"></i></h3>
-                    <div class="accordion-content">
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/cd853f/ffffff?text=Salmon" alt="Salmón Rosado a la Plancha">
-                            <h4>Salmón Rosado a la Plancha</h4>
-                            <p>Filet de salmón fresco cocinado a la perfección, acompañado de vegetales al vapor y una salsa ligera de limón.</p>
-                        </div>
-                        <div class="dish-gallery-item">
-                            <!-- Use your real image here instead of placeholder -->
-                            <img src="https://placehold.co/300x200/a9a9a9/ffffff?text=Risotto" alt="Risotto de Hongos Silvestres">
-                            <h4>Risotto de Hongos Silvestres</h4>
-                            <p>Arroz arbóreo cremoso con una exquisita mezcla de hongos silvestres y queso parmesano gratinado.</p>
-                        </div>
-                        <!-- You can add more dishes here -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="carta-completa" class="section">
             <h2>Nuestra Carta Completa</h2>
             <p>Explora nuestra variada propuesta gastronómica, pensada para satisfacer todos los paladares. Haz clic en cada categoría para ver los platos.</p>
@@ -806,13 +763,13 @@
                         <div class="menu-item"><span>Milanesa a caballo</span><span>$ 11.500</span><p>Carne de ternera, huevo frito c/guarnición.</p></div>
                         <div class="menu-item"><span>Milanesa napolitana</span><span>$ 12.000</span><p>Carne de ternera, salsa de tomate, jamón y queso c/guarnición.</p></div>
                         <div class="menu-item"><span>Milanesa Los Troncos</span><span>$ 12.500</span><p>Carne de ternera, queso mozzarella, cheddar, panceta y huevo frito.</p></div>
-                        <div class="menu-item"><span>Milanesa a la suiza</span><span>$ 12.000</span><p>Carne de ternera, salsa blanca y queso gratinado c/guarnición.</p></div>
-                        <div class="menu-item"><span>Lomo al champiñón</span><span>$ 14.000</span><p>Medallón de lomo, champiñones, cebollita, crema y vino blanco c/guarnición.</p></div>
-                        <div class="menu-item"><span>Lomo a la mostaza</span><span>$ 14.000</span><p>Medallón de lomo, crema, mostaza y pimienta c/guarnición.</p></div>
-                        <div class="menu-item"><span>Lomo a la pimienta</span><span>$ 13.000</span><p>Medallón de lomo, crema y pimienta negra c/guarnición.</p></div>
-                        <div class="menu-item"><span>Lomo a la plancha</span><span>$ 12.000</span><p>Medallón de lomo a la plancha c/guarnición.</p></div>
-                        <div class="menu-item"><span>Lomo a la suiza</span><span>$ 14.000</span><p>Medallón de lomo, salsa blanca, crema y queso c/guarnición.</p></div>
-                        <div class="menu-item"><span>Niño envuelto</span><span>$ 13.000</span><p>Nalga, panceta ahumada, ajo, perejil, mostaza y crema.</p></div>
+                        <div class="menu-item"><span>Milanesa a la suiza</span><span>$ 12.000</span><p>Carne de ternera, salsa blanca y queso gratinado, c/guarnición.</p></div>
+                        <div class="menu-item"><span>Lomo al champiñón</span><span>$ 14.000</span><p>Medallón de lomo, champiñones, cebollita, crema y vino blanco. C/guarnicion</p></div>
+                        <div class="menu-item"><span>Lomo a la mostaza</span><span>$ 14.000</span><p>Medallón de lomo, crema, mostaza y pimienta. c/guarnicion.</p></div>
+                        <div class="menu-item"><span>Lomo a la pimienta</span><span>$ 13.000</span><p>Medallón de lomo, crema y pimienta negra c/guarnicion.</p></div>
+                        <div class="menu-item"><span>Lomo a la plancha</span><span>$ 12.000</span><p>Medallón de lomo a la plancha c/guarnicion.</p></div>
+                        <div class="menu-item"><span>Lomo a la suiza</span><span>$ 14.000</span><p>Medallón de lomo, salsa blanca, crema y queso c/guarnicion.</p></div>
+                        <div class="menu-item"><span>Niño envuelto</span><span>$ 13.000</span><p>Nalga, panceta ahumada, ajo, perejil, mostaza y crema. c/guarnición.</p></div>
                         <div class="menu-item"><span>Sorrentinos</span><span>$ 12.000</span><p>Jamón y queso.</p></div>
                         <div class="menu-item"><span>Canelón de carne</span><span>$ 12.000</span></div>
                         <div class="menu-item"><span>Canelón de verdura</span><span>$ 12.000</span></div>
@@ -859,7 +816,7 @@
                     </div>
                 </div>
 
-                <!-- Pickles -->
+                <!-- Picadas -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Picadas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -873,15 +830,15 @@
                     <h3 class="accordion-header">Pizzas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
                         <div class="menu-item"><span>Timbó</span><span>$ 10.000</span><p>Queso mozzarella, salsa de tomates, aceitunas y orégano.</p></div>
-                        <div class="menu-item"><span>Palo Rosa</span><span>$ 12.000</span><p>Queso mozzarella, jamón, salsa de tomates, tomates cherry, oliva, albahaca, aceitunas.</p></div>
-                        <div class="menu-item"><span>Palmito</span><span>$ 12.000</span><p>Queso mozzarella, tomate, palmitos y huevo duro.</p></div>
-                        <div class="menu-item"><span>Caña Fístola</span><span>$ 15.000</span><p>Queso mozzarella, salsa de tomates, queso roquefort y nueces.</p></div>
-                        <div class="menu-item"><span>Anchico</span><span>$ 15.000</span><p>Queso mozzarella, cebolla caramelizada, rúcula y jamón crudo.</p></div>
-                        <div class="menu-item"><span>4 Quesos</span><span>$ 15.000</span><p>Salsa de tomates, queso mozzarella, roquefort, provolone y sardo.</p></div>
+                        <div class="menu-item"><span>Palo Rosa</span><span>$ 12.000</span><p>Queso muzarella, jamón, salsa de tomates, tomates cherry, oliva, albahaca, aceitunas.</p></div>
+                        <div class="menu-item"><span>Palmito</span><span>$ 12.000</span><p>Queso muzarella, tomate, palmitos y huevo duro.</p></div>
+                        <div class="menu-item"><span>Caña Fístola</span><span>$ 15.000</span><p>Queso muzarella, salsa de tomates, queso roquefort y nueces.</p></div>
+                        <div class="menu-item"><span>Anchico</span><span>$ 15.000</span><p>Queso muzarella, cebolla caramelizada, rúcula y jamón crudo.</p></div>
+                        <div class="menu-item"><span>4 Quesos</span><span>$ 15.000</span><p>Salsa de tomates, queso muzarella, roquefort, provolone, y sardo</p></div>
                         <div class="menu-item"><span>Petiribí</span><span>$ 12.000</span><p>Salsa de tomate, queso mozzarella, calabresa y morrones asados.</p></div>
                         <div class="menu-item"><span>Mora Blanca</span><span>$ 13.000</span><p>Queso mozzarella, cebolla y oliva.</p></div>
-                        <div class="menu-item"><span>Incienso</span><span>$ 12.000</span><p>Salsa de tomate, mozzarella, huevo duro, choclo y aceitunas.</p></div>
-                        <div class="menu-item"><span>Pindó</span><span>$ 14.000</span><p>Salsa de tomate, bondiola, queso mozzarella, rodajas de tomate, aceitunas y aceite de ajo.</p></div>
+                        <div class="menu-item"><span>Incienso</span><span>$ 12.000</span><p>Salsa de tomate, mozzarella, huevo duro, choclo y aceitunas</p></div>
+                        <div class="menu-item"><span>Pindó</span><span>$ 14.000</span><p>Salsa de tomate, bondiola, Queso mozzarella, rodajas de tomate, aceitunas y aceite de ajo.</p></div>
                         <div class="menu-item"><span>Los Troncos</span><span>$ 15.000</span><p>Salsa de tomate, queso mozzarella, queso cheddar y panceta.</p></div>
                         <div class="menu-item"><span>Ananá</span><span>$ 15.000</span><p>Salsa de tomate, queso mozzarella, jamón crudo, ananá y cerezas.</p></div>
                         <div class="menu-item"><span>Kurupí</span><span>$ 15.000</span><p>Salsa de tomate, Queso mozzarella, carne de ternera picada a cuchillo y cebolla caramelizada.</p></div>
@@ -909,7 +866,7 @@
                     </div>
                 </div>
 
-                <!-- Desserts -->
+                <!-- Postres -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Postres <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -920,7 +877,7 @@
                     </div>
                 </div>
 
-                <!-- Non-alcoholic beverages -->
+                <!-- Bebidas sin Alcohol -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Bebidas sin Alcohol <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -943,7 +900,7 @@
                     </div>
                 </div>
 
-                <!-- Beers -->
+                <!-- Cervezas -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Cervezas <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -963,7 +920,7 @@
                     </div>
                 </div>
 
-                <!-- Wines -->
+                <!-- Vinos -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Vinos <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -982,7 +939,7 @@
                     </div>
                 </div>
 
-                <!-- Cocktails -->
+                <!-- Tragos -->
                 <div class="accordion-item">
                     <h3 class="accordion-header">Tragos <i class="fas fa-chevron-down"></i></h3>
                     <div class="accordion-content">
@@ -1005,10 +962,19 @@
             <h2>Encuéntranos</h2>
             <p>Estamos ansiosos por recibirte en Los Troncos Resto Bar.</p>
             <div class="contact-info">
-                <p><strong>Dirección:</strong> Av. San Martín 2758, N3334 Puerto Rico, Misiones, Argentina</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+543743611895">+54 3743 611895</a></p>
-                <p><strong>Horarios:</strong></p>
-                <ul>
+                <div class="info-line">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Av. San Martín 2758, N3334 Puerto Rico, Misiones, Argentina</span>
+                </div>
+                <div class="info-line">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+543743611895">+54 3743 611895</a>
+                </div>
+                <div class="info-line">
+                    <i class="fas fa-clock"></i>
+                    <span>Horarios:</span>
+                </div>
+                <ul class="hours-list">
                     <li>Jueves a Domingo: 19:00 - 00:30 hs</li>
                 </ul>
                 <p>¡Te esperamos para brindarte una experiencia inolvidable!</p>
@@ -1070,14 +1036,12 @@
                 "IMG-20250601-WA0014.jpg",
                 "IMG-20250606-WA0004.jpg",
                 "IMG-20250606-WA0003.jpg",
-                // La imagen "Imagen de WhatsApp 2025-06-06 a las 11.40.33_1e2721cb.jpg" ha sido eliminada.
-                // Por favor, proporcióname la nueva imagen para añadirla aquí.
+                // Por favor, proporciona el nombre de la nueva imagen para añadirla aquí.
             ];
             const carouselAltTexts = [
                 "Exterior de Los Troncos Resto Bar de noche",
                 "Detalle de luces colgantes Edison en Los Troncos",
-                "Decoración de cava de vinos en la pared de Los Troncos"
-                // El texto alternativo para la imagen eliminada ha sido eliminado.
+                "Decoración de cava de vinos en la pared de Los Troncos",
                 // Por favor, proporciona el texto alternativo para la nueva imagen.
             ];
             let currentImageIndex = 0;
